@@ -14,13 +14,13 @@ app.use(express.json());
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-    console.log('Hello world')
+    //console.log('Hello world')
     res.send('Hello world')
     res.sendFile(path.join(__dirname, '/public/index.html'))
 });
 
 app.get('/notes', (req, res) => {
-    console.log('Hello world')
+    //console.log('Hello world')
     res.sendFile(path.join(__dirname, '/public/notes.html'))
 });
 
@@ -34,7 +34,7 @@ app.get('/api/notes', (req, res) => {
 app.post('/api/notes', (req, res) => {
   // console.log('This is the /api/notes')
   // console.log(db)
-  console.log("Note saved")
+  //console.log("Note saved")
   console.log(req.body)
 
   let notesData = JSON.parse(fs.readFileSync('./db/db.json', 'utf8'));
